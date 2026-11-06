@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0f1a">
+    <meta name="description" content="Joue tes projets MikuMikuDance en VR ou comme un jeu vidéo, directement dans le navigateur.">
+    <title>MMD Scène VR</title>
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <script>
+        // Hébergeurs sans en-têtes COOP/COEP : un service worker les ajoute (moteur MMD multithread).
+        if (!window.crossOriginIsolated && window.isSecureContext && "serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./coi-sw.js").then(function () {
+                if (!navigator.serviceWorker.controller && !sessionStorage.getItem("coi-reloaded")) {
+                    sessionStorage.setItem("coi-reloaded", "1");
+                    location.reload();
+                }
+            }).catch(function () { /* mode monothread */ });
+        }
+    </script>
+  <script type="module" crossorigin src="./assets/index-BfNLUblq.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/timingTools-C6GRK2Wr.js">
+  <link rel="modulepreload" crossorigin href="./assets/logger-CuBYPcDK.js">
+  <link rel="modulepreload" crossorigin href="./assets/shaderProcessor-D6Hn71KF.js">
+  <link rel="modulepreload" crossorigin href="./assets/performanceConfigurator-UtxC_Odd.js">
+  <link rel="modulepreload" crossorigin href="./assets/engineStore-Bn2tApal.js">
+  <link rel="modulepreload" crossorigin href="./assets/shaderStore-D-XQlhUT.js">
+  <link rel="modulepreload" crossorigin href="./assets/internalTexture-Dlz1Grf0.js">
+  <link rel="modulepreload" crossorigin href="./assets/abstractEngine.pure-DhdYL7EI.js">
+  <link rel="modulepreload" crossorigin href="./assets/thinEngine.pure-BHC3d-IF.js">
+  <link rel="modulepreload" crossorigin href="./assets/math.scalar.functions-Bcxiuh2E.js">
+  <link rel="modulepreload" crossorigin href="./assets/typeStore-Cu_sj2zM.js">
+  <link rel="modulepreload" crossorigin href="./assets/math.color.pure-BIbzNJ9p.js">
+  <link rel="modulepreload" crossorigin href="./assets/halfFloat-Ce77JD5z.js">
+  <link rel="modulepreload" crossorigin href="./assets/tools.pure-BX1yYeW_.js">
+  <link rel="modulepreload" crossorigin href="./assets/smartArray-BRfcgNbX.js">
+  <link rel="modulepreload" crossorigin href="./assets/decorators-Yb2wyjOG.js">
+  <link rel="modulepreload" crossorigin href="./assets/decorators.serialization-NHwVrAo4.js">
+  <link rel="modulepreload" crossorigin href="./assets/lightConstants-BotJfpIu.js">
+  <link rel="modulepreload" crossorigin href="./assets/buffer.pure-DgwF7y11.js">
+  <link rel="modulepreload" crossorigin href="./assets/sceneComponent-C-lhkOch.js">
+  <link rel="modulepreload" crossorigin href="./assets/math.plane-BZCo1yuE.js">
+  <link rel="modulepreload" crossorigin href="./assets/drawWrapper-CrplgIni.js">
+  <link rel="modulepreload" crossorigin href="./assets/material.pure-D8Pdg1dy.js">
+  <link rel="modulepreload" crossorigin href="./assets/preload-helper-uBIymjUX.js">
+  <link rel="modulepreload" crossorigin href="./assets/math.viewport-Cp0w6PSE.js">
+  <link rel="modulepreload" crossorigin href="./assets/math.size-BHZaDYSv.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-tq4mk2S_.css">
+</head>
+<body>
+    <canvas id="renderCanvas" touch-action="none"></canvas>
+    <div id="ui"></div>
+</body>
+</html>
