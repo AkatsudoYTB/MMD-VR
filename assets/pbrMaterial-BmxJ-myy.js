@@ -1,0 +1,1 @@
+import{PBRMaterial as e,RegisterPBRMaterial as t,RegisterPbrMaterial as n}from"./pbrMaterial.pure-CJ7fvaLe.js";n();export{e as PBRMaterial,t as RegisterPBRMaterial,n as RegisterPbrMaterial};
